@@ -26,5 +26,8 @@ def stock_picker(prices)
     #Credit to @mahemoff for the statement above: https://stackoverflow.com/questions/6040494/how-to-find-the-key-of-the-largest-value-hash#comment52054725_6040733
 end
 
+def new_stock_picker(prices)
+    
+end
 p stock_picker([17,3,6,9,15,8,6,1,10])
 

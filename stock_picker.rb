@@ -37,6 +37,9 @@ def new_stock_picker(prices)
     sorted_prices.each do|curr_price|
         reverse_prices.each do|highest|
             if(prices.find_index(curr_price) < prices.find_index(highest)) then
+                if(a[0] != nil) then 
+                    result.pop                    
+                end
                 result.push(highest - curr_price).push(Array.new(0).push(prices.find_index(curr_price)).push(prices.find_index(highest)))
             end
         end

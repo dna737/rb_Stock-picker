@@ -47,7 +47,15 @@ def new_stock_picker(prices)
 end
 
 def stock_picker_3(prices)
-
+    if(prices == prices.sort.reverse) then return "This is not the time to buy stocks :(" end
+    result = {}
+    prices.each_with_index do|price, i|
+        #use index to slice the array from that part to the end.
+        subarray = prices.slice(prices.find_index(price), prices.size)
+        result[subarray.max - price] = [i, prices.find_index(subarray.max)] #storing the array of indices in the hash
+    end
+    #send the value corresponding to the highest key by uing hash[hash.keys.max]
+    
 end
 
 p new_stock_picker([17,3,6,9,15,8,6,1,10])

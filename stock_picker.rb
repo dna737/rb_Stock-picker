@@ -40,10 +40,15 @@ def new_stock_picker(prices)
                 if(result[0] != nil) then 
                     result.pop                    
                 end
-                result.push(highest - curr_price).push(Array.new(0).push(prices.find_index(curr_price)).push(prices.find_index(highest)))
+                result = Array.new(0).push(highest - curr_price).push(Array.new(0).push(prices.find_index))
             end
         end
     end
 end
+
+def stock_picker_3(prices)
+
+end
+
 p new_stock_picker([17,3,6,9,15,8,6,1,10])
 
